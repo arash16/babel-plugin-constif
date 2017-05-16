@@ -1,6 +1,6 @@
 # babel-plugin-constif
 
-> This plugin allows Babel to remove remove if conditionals with string literals as condition.
+> This plugin allows Babel to remove if conditionals with string literals as condition.
 
 ## Example
 
