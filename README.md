@@ -41,7 +41,7 @@ npm install --save-dev babel-plugin-constif
 
 **.babelrc**
 
-```json
+```javascript
 {
   "plugins": [
     ["constif", {var1: true, var2:false}]
