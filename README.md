@@ -7,7 +7,7 @@
 **In**
 
 ```javascript
-if ("IS_DEBUG")
+if ("isDebug")
 	console.log(1);
 else
 	console.log(2);
@@ -44,7 +44,7 @@ npm install --save-dev babel-plugin-constif
 ```json
 {
   "plugins": [
-    ["constif", {var1: true, var2:false}]
+    ["constif", {isDebug: true, var2:false}]
   ]
 }
 ```
