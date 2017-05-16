@@ -12,9 +12,6 @@ export default function ({ types: t }) {
 		if (process.env[keyS]!==undefined)
 			result = process.env[keyS];
 
-
-		console.log(key, result);
-
 		if (result==='true' || result===true || result==='1' || result===1)
 			return true;
 
@@ -53,10 +50,17 @@ export default function ({ types: t }) {
 				if (cr === undefined) return;
 
 				let result = cr ? node.consequent : node.alternate;
-				if (result)
-					path.replaceWith(result);
+				if (!result) path.remove();
+				else if (t.isBlockStatement(result))
+					path.replaceWithMultiple(result.body);
 				else
-					path.remove();
+					path.replaceWith(result);
+			},
+			ConditionalExpression(path, state) {
+				const { node } = path;
+				let cr = check(node.test, state);
+				if (cr === undefined) return;
+				path.replaceWith(cr ? node.consequent : node.alternate);
 			}
 		}
 	}

@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-constif",
-  "version": "1.0.3",
-  "description": "This plugin allows Babel to remove remove if conditionals with string literals as condition.",
+  "version": "1.1.0",
+  "description": "This plugin allows Babel to remove if conditionals with string literals as condition.",
   "author": "Arash Shakery <arash.shakery@gmail.com> (arash16.com)",
   "license": "MIT",
   "main": "lib/index.js",
