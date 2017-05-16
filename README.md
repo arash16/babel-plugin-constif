@@ -23,7 +23,7 @@ console.log(1);
 console.log(2);
 
 // babel script.js
-if ("IS_DEBUG")
+if ("isDebug")
 	console.log(1);
 else
 	console.log(2);
@@ -44,7 +44,7 @@ npm install --save-dev babel-plugin-constif
 ```json
 {
   "plugins": [
-    ["constif", {isDebug: true, var2:false}]
+    ["constif", {var1: true, var2:false}]
   ]
 }
 ```
@@ -52,7 +52,7 @@ npm install --save-dev babel-plugin-constif
 ### Via CLI
 
 ```sh
-VAR1=true babel --plugins constif script.js
+VAR1=true VAR2=0 babel --plugins constif script.js
 ```
 
 ### Via Node API
