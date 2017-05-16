@@ -1,0 +1,27 @@
+{
+  "name": "babel-plugin-constif",
+  "version": "1.0.0",
+  "description": "a babel-plugin to transform l-template tags.",
+  "author": "Arash Shakery <arash.shakery@gmail.com> (arash16.com)",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src/index.js -o lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arash16/constif.git"
+  },
+  "keywords": [
+    "babel-plugin",
+    "modules",
+    "es6"
+  ],
+  "bugs": {
+    "url": "https://github.com/arash16/constif/issues"
+  },
+  "homepage": "https://github.com/arash16/constif#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0"
+  }
+}
